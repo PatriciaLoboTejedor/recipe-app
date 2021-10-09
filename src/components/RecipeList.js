@@ -1,13 +1,16 @@
 import Recipe from "./Recipe";
 
 function RecipeList(props) {
-  console.log(props.recipeList);
-  const recipeList = props.recipeList.map((recipe) => (
-    <li key={recipe.id}>
+  const recipeList = props.recipeList.map((recipe, index) => (
+    <li key={index}>
       <Recipe recipe={recipe} />
     </li>
   ));
-  return <ul className="recipeList">{recipeList}</ul>;
+  return (
+    <section>
+      <ul className="main__list">{recipeList}</ul>
+    </section>
+  );
 }
 
 export default RecipeList;

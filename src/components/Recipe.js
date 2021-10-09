@@ -8,13 +8,34 @@ function Recipe(props) {
       );
     });
   };
-  console.log(props.recipe);
+
+  const timeRecipe = props.recipe.time;
+  const getTime = () => {
+    if (timeRecipe !== 0) {
+      return (
+        <p className="recipeCard__text-time">
+          <i className="fa fa-clock-o"></i> {timeRecipe} min.
+        </p>
+      );
+    } else {
+      return (
+        <p className="recipeCard__text-time">
+          <i className="fa fa-clock-o"></i> -- min.
+        </p>
+      );
+    }
+  };
+
   return (
-    <article className="pokeCard">
-      <img className="" src={props.recipe.image} alt={props.recipe.name} />
-      <h2 className="">{props.recipe.name}</h2>
-      <p className="">{props.recipe.time} min.</p>
-      <ul className="">{cuisineTypes()}</ul>
+    <article className="recipeCard">
+      <img
+        className="recipeCard__img"
+        src={props.recipe.image}
+        alt={props.recipe.name}
+      />
+      <h2 className="recipeCard__text-name">{props.recipe.name}</h2>
+      {getTime()}
+      <ul className="recipeCard__text-type">{cuisineTypes()}</ul>
     </article>
   );
 }

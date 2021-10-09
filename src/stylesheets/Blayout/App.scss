@@ -22,7 +22,7 @@
         align-items: center;
         &_input {
           margin: 5px;
-          border: 2px $bluePrincipal solid;
+          border: 2px $greyPrincipal solid;
           background-color: black;
           color: white;
           min-width: 270px;
@@ -34,7 +34,7 @@
         }
         &_select {
           cursor: pointer;
-          border: 2px $bluePrincipal solid;
+          border: 2px $greyPrincipal solid;
           background-color: black;
           color: white;
           min-width: 150px;
@@ -44,7 +44,7 @@
         }
         &_reset {
           cursor: pointer;
-          background-color: $bluePrincipal;
+          background-color: $greyPrincipal;
           color: black;
           border-radius: 5px;
           height: 30px;
@@ -79,7 +79,7 @@
       text-align: center;
       &_button {
         cursor: pointer;
-        background-color: $bluePrincipal;
+        background-color: $greyPrincipal;
         color: white;
         border-radius: 5px;
         height: 30px;

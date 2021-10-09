@@ -1,16 +1,20 @@
-.characterCard {
-  background-color: rgb(0, 176, 199);
-  height: 200px;
+.recipeCard {
+  background-color: linear-gradient(
+    to bottom,
+    $greyPrincipal 60%,
+    $greyPrincipal 100%
+  );
+  border: 1px solid grey;
   width: 150px;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: grey;
+  padding: 0.5rem;
   @include tablet {
-    height: 250px;
     width: 200px;
   }
   &:hover {
-    border: 5px white solid;
+    cursor: pointer;
   }
   &__img {
     max-width: 150px;
@@ -20,18 +24,33 @@
   }
   &__text {
     font-size: 10px;
-    padding: 5px;
+
     @include tablet {
       font-size: 12px;
-      padding: 10px;
     }
     &-name {
+      font-size: 12px;
+      padding: 10px 0px;
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+    &-time {
       font-size: 10px;
-      padding-bottom: 5px;
+      padding: 3px 0px;
+      border-bottom: solid grey 1px;
+      border-top: solid grey 1px;
       @include tablet {
         font-size: 12px;
-        padding-bottom: 5px;
       }
+    }
+    &-type {
+      font-size: 10px;
+      padding-top: 3px;
+      @include tablet {
+        font-size: 12px;
+      }
+      text-transform: capitalize;
     }
   }
 }
